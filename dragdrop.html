@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>drog&drop</title>
+</head>
+<body>
+<h1>Html 5</h1>
+
+<p>
+	please drag the image
+
+</p>
+<div id="mydiv" 
+style="width: 500; height: 300;padding:20px;margin: 40px;border: 6px solid black "ondrop="dropMe(event)" ondragover="myDrop(event)">
+	
+</div>
+
+<img id="drag" src="images.jpg" alt="my image" width="200px" draggable="true" ondragstart="dragFunction(event)" />
+
+<script>	
+function myDrop(e ){
+e.preventDefault();
+}
+function dragFunction(e){
+e.dataTransfer.setData("text/html",e.target.id);
+}
+function dropMe(e){
+e.preventDefault();
+var data = e.dataTransfer.getData("text/html");
+e.target.appendChild(document.getElementById(data));
+}
+</script>
+</body>
+</html>
