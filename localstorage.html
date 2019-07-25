@@ -1,0 +1,46 @@
+<!DOCTYPE>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>localstorage</title>
+</head>
+<body>
+<h1>Html 5 / local storage</h1>
+
+<div id="mydiv1">
+</div>
+<div id="mydiv2">
+</div>
+<div id="mydiv3">
+</div>
+<script >
+if (typeof(Storage) !== "undefined") {
+
+localStorage.setItem("firstname1","Ahmad");
+localStorage.setItem("firstname2","ali");
+localStorage.setItem("firstname3","Amad");
+
+
+
+
+document.getElementById("mydiv1").innerHTML= localStorage.getItem("firstname1") +"<br>";
+document.getElementById("mydiv2").innerHTML= localStorage.getItem("firstname2") +"<br>";
+document.getElementById("mydiv3").innerHTML= localStorage.getItem("firstname3") +"<br>";
+} else{
+document.getElementById('mydiv').innerHTML="your browser not support"
+
+
+
+}
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
